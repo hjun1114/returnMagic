@@ -2,11 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Return Magic Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
   </head>
-    <% parsedData["products"].forEach(function(loopedProducts){ %>
-        <li><%= loopedProducts["name"] %></li>
-    <% }) %>
+  <body>
+    <section class="intro text-center">
+      <h3>Return Magic Products</h1>
+    </section>
+    <section class="posted-data">
+      <div class="container-dummy text-center">
+        <% parsedData["products"].forEach(function(loopedProducts){ %>
+        <div class="products">
+          <img src="http://placehold.it/200x100" alt="">
+          <li><b><%= loopedProducts["name"] %></b></li>
+          <li>Type: <%= loopedProducts["type"] %></li>
+          <li>Tags: <%= loopedProducts["tags"][0] %>,<%= loopedProducts["tags"][1] %>, <%= loopedProducts["tags"][2] %> </li>
+          <li>Total Sales: <%= loopedProducts["totalSalesValueUSD"] %> USD</li>
+          <li>Total Returns: <%= loopedProducts["totalReturnValueUSD"] %> USD</li>
+          <li>Return Rate: <%= loopedProducts["returnRate"] %></li>
+        </div>
+        <% }) %>
+      </div>
+    </section>
 
   </body>
 </html>

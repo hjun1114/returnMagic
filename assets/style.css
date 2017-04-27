@@ -1,0 +1,67 @@
+/*Basic Settings*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  box-sizing: inherit;
+}
+html {
+  background-color: #fff;
+  color: #6f6969;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+/*Products Page*/
+
+
+.products {
+  display: inline-block;
+  background: #e5e4e4;
+  margin: 15px;
+}
+.products li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  list-style: none;
+  line-height: 20px;
+}
+
+
+/*Search Page*/
+
+
+.bg-form{
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("bg-1.jpeg");
+	min-height: 100vh;
+	background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bg-form h1{
+  color: #fff;
+}
+.form-container{
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+input[type="text"] {
+    width: 22em;
+    text-align: center;
+    margin: 18px auto;
+}
+input[type="submit"] {
+    width: 5em;
+    background: #e4dfe1;
+}
