@@ -11,7 +11,7 @@ app.get("/results", function(req, res){
   request("https://yjm3zctbgh.execute-api.us-east-1.amazonaws.com/productionV1/products", function(error, response, body){
     if(!error && response.statusCode == 200) {
       var parsedData = JSON.parse(body) // we get the body object as string, so have to parse it and store in a variable
-      res.send(parsedData["products"]);
+      res.render("results", {parsedData: parsedData});
     }
   });
 });
